@@ -1,6 +1,6 @@
 import re
 
-def parse(formula)
+def parse(formula):
     elements = []
     realelements = []
     r = re.compile("([a-zA-Z]+)([0-9]+)")
@@ -20,5 +20,7 @@ def parse(formula)
     compound = {}
     for i in range(0,len(formula)):
         compound[formula[i]]=realelements[i]
+    print(compound)
     return(compound)
 
+#parse("C6H12O6")
