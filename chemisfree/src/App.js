@@ -10,8 +10,11 @@ class App extends Component {
 	
   } 
 handleClick () {
-    axios.get('http://localhost:5000/combust/C6H12O6').then(response => console.log(response))
+    axios.get('http://localhost:5000/molarmass/C6H12O6').then(response => console.log(response))
   }  
+handleClick2 () {
+    axios.get('http://localhost:5000/combust/C6H12O6').then(response => console.log(response))
+  } 
   render () {
     return (
 <div>
@@ -26,7 +29,7 @@ handleClick () {
         </button>
   
 		
-		<button className = 'button' onClick={this.handleClick}>
+		<button className = 'button' onClick={this.handleClick2}>
           Calculate Combustion reaction
         </button>
 		

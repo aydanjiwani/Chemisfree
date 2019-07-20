@@ -24,7 +24,7 @@
 }.button {
   background-color:green;
   border-style: hidden;
-  border-width:40px;
+  flex-direction: 'row';
   color: white;
   font-size: 16px;
   height: 40px;
