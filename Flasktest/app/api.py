@@ -8,21 +8,16 @@ import json
 app = Flask(__name__)
 api = Api(app)
 
-elements = {}
+
 
 class MolarMass(Resource):
     def get(self, element_id):
-        return {element_id: elements[element_id]}
-    def put(self, element_id):
-        elements[element_id] = molarMass(request.form['data'])
-        return {element_id: elements[element_id]}
-    
+        return {element_id: molarMass(element_id)}
+
 class Combust(Resource):
     def get(self, element_id):
-        return {element_id: elements[element_id]}
-    def put(self, element_id):
-        elements[element_id] = combust(request.form['data'])
-        return {element_id: elements[element_id]}
+        return {element_id: combust(element_id)}
+    
 
 api.add_resource(MolarMass, '/molarmass/<string:element_id>')
 api.add_resource(Combust, '/combust/<string:element_id>')
