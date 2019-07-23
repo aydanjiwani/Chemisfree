@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 
@@ -18,8 +19,23 @@
   color: #61dafb;
 }
 
+.form {
+  border-style: hidden;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  height: -10px
+}
+
+h1{
+text-align: center;
+color: white;
+	
+}
+
 .button__container {
-  margin-top: 200px;
+  margin-top: 20px;
   text-align: center;
 }.button {
   background-color:green;
@@ -27,6 +43,13 @@
   flex-direction: 'row';
   color: white;
   font-size: 16px;
-  height: 40px;
-  width: 200px;
+  height: 23px
+}
+  .button2 {
+  background-color:red;
+  border-style: hidden;
+  flex-direction: 'row';
+  color: white;
+  font-size: 16px;
+  height: 23px
 }
