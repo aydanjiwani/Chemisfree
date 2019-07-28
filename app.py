@@ -4,10 +4,11 @@ from parse import parse
 from molarmass import molarMass
 from combustion import combust
 import json
+from flask_cors import CORS
 
 app = Flask(__name__)
 api = Api(app)
-
+CORS(app)
 
 
 class MolarMass(Resource):
