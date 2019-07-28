@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
 import axios from 'axios'
+const request = require('request');
 
 class App extends Component {
 
@@ -15,6 +16,7 @@ this.state = {
 	this.handleChange = this.handleChange.bind(this);
 	
 	
+	
   } 
   
   handleChange(event) {
@@ -24,11 +26,12 @@ this.state = {
 }
 handleClick () {
 	
-	
-    axios.get('https://chemisfree-api.herokuapp.com/molarmass/'.concat(this.state.value)).then(response => this.setState({value: JSON.stringify(response.data).replace(/[`~!@#$%^&*()_|+\-=?;'",<>\{\}\[\]\\\/]/gi, '')}))
+	axios.get('https://chemisfree-api.herokuapp.com/molarmass/'.concat(this.state.value)).then(response => this.setState({value: JSON.stringify(response.data).replace(/[`~!@#$%^&*()_|=?;'",<\{\}\[\]\\\/]/gi, '')}))
+    
   }  
 handleClick2 () {
     axios.get('https://chemisfree-api.herokuapp.com/combust/'.concat(this.state.value)).then(response => this.setState({value: JSON.stringify(response.data).replace(/[`~!@#$%^&*()_|=?;'",<\{\}\[\]\\\/]/gi, '')}))
+	
   } 
   render () {
     return (
