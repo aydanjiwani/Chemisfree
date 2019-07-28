@@ -8,7 +8,7 @@ import json
 
 app = Flask(__name__)
 api = Api(app)
-
+CORS(api)
 
 
 class MolarMass(Resource):
