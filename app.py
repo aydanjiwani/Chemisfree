@@ -7,8 +7,9 @@ from combustion import combust
 import json
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
-CORS(api)
+
 
 
 class MolarMass(Resource):
