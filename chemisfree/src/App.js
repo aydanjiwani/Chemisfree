@@ -25,10 +25,10 @@ this.state = {
 handleClick () {
 	
 	
-    axios.get('https://chemisfree-api.herokuapp.com/molarmass/'.concat(this.state.value)).then(response => this.setState({value: JSON.stringify(response.data).replace(/[`~!@#$%^&*()_|+\-=?;'",<>\{\}\[\]\\\/]/gi, '')}))
+    axios.get('http://localhost:5000/molarmass/'.concat(this.state.value)).then(response => this.setState({value: JSON.stringify(response.data).replace(/[`~!@#$%^&*()_|+\-=?;'",<>\{\}\[\]\\\/]/gi, '')}))
   }  
 handleClick2 () {
-    axios.get('https://chemisfree-api.herokuapp.com/combust/'.concat(this.state.value)).then(response => this.setState({value: JSON.stringify(response.data).replace(/[`~!@#$%^&*()_|=?;'",<\{\}\[\]\\\/]/gi, '')}))
+    axios.get('http://localhost:5000/combust/'.concat(this.state.value)).then(response => this.setState({value: JSON.stringify(response.data).replace(/[`~!@#$%^&*()_|=?;'",<\{\}\[\]\\\/]/gi, '')}))
   } 
   render () {
     return (
